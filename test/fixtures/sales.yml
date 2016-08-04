@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  num_factura: 1
+  fecha: 2016-08-04
+  cantidad: 1
+  venta_total: 1
+
+two:
+  user_id: 
+  num_factura: 1
+  fecha: 2016-08-04
+  cantidad: 1
+  venta_total: 1

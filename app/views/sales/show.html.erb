@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @sale.user %>
+</p>
+
+<p>
+  <strong>Num factura:</strong>
+  <%= @sale.num_factura %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @sale.fecha %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @sale.cantidad %>
+</p>
+
+<p>
+  <strong>Venta total:</strong>
+  <%= @sale.venta_total %>
+</p>
+
+<%= link_to 'Edit', edit_sale_path(@sale) %> |
+<%= link_to 'Back', sales_path %>
