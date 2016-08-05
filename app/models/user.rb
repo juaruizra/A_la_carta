@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :sale
+
+   validates :name, length: { minimum: 2 }, presence: true, uniqueness: true
+  #  validates :games_played, numericality: { only_integer: true },, presence: true
 end

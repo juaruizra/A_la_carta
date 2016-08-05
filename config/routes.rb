@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :sales
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' } # , decirle a devise que el registro lo mire con el que escribimos
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
