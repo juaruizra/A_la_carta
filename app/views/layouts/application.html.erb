@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ALaCarta</title>
+  <title>A la Carta</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <%= render "partials/navigation" %>
+  <%= render "partials/footer" %>
   <!-- <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p> -->
   <%= yield %>
