@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sale_id: 
+  nombre: MyString
+  descripcion: MyText
+  tipo_producto: MyString
+  valor_unitario: 1
+
+two:
+  sale_id: 
+  nombre: MyString
+  descripcion: MyText
+  tipo_producto: MyString
+  valor_unitario: 1
