@@ -2,8 +2,6 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
-  <!--  -->
-  <!--  -->
     <div>
       <%= f.label :name , "User Name:"%>
       <%= f.text_field :name, autofocus: true,placeholder: "What is your User Name?" %>
@@ -16,9 +14,6 @@
       <%= f.label :date_of_birth, "Date of birth:" %>
       <%= f.date_select :date_of_birth %>
     </div>
-
-      <!--  -->
-
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
@@ -34,9 +29,6 @@
     <%= f.radio_button :is_female, 1, checked: @user.is_female?%> <%= f.label :is_female, "Female" %>
     <%= f.radio_button :is_female, 0, checked: !@user.is_female? %> <%= f.label :is_female, "Male" %>
   </div>
-
-<!-- -->
-
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
