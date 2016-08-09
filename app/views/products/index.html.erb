@@ -21,7 +21,7 @@
       <tr>
         <td><%= product.nombre %></td>
         <td><%= product.descripcion %></td>
-        <td><%= product.image %></td>
+        <td> <%= image_tag product.image.url(:thumb) %></td>
         <td><%= product.tipo_producto %></td>
         <td><%= product.valor_unitario %></td>
         <td><%= link_to 'Mostrar', product, class: 'btn btn-default' %></td>
