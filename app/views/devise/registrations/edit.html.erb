@@ -34,11 +34,8 @@
     <%= f.radio_button :is_female, 1, checked: @user.is_female?%> <%= f.label :is_female, "Female" %>
     <%= f.radio_button :is_female, 0, checked: !@user.is_female? %> <%= f.label :is_female, "Male" %>
   </div>
-  <!-- <div>
-    <%= f.label :is_admin, "Is Admin (?):" %>
-    <%= f.radio_button :is_admin, 1, checked: @user.is_admin?%> <%= f.label :is_admin, "Yes" %>
-    <%= f.radio_button :is_admin, 0, checked: !@user.is_admin? %> <%= f.label :is_admin, "No" %>
-  </div> -->
+
+<!-- -->
 
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
