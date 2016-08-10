@@ -7,11 +7,13 @@
 <table class="table">
   <thead>
     <tr>
+      <th>Id Producto</th>
       <th>Nombre</th>
       <th>Descripcion</th>
       <th>Imagen</th>
       <th>Tipo producto</th>
       <th>Valor unitario</th>
+      <th>Stock</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,11 +21,13 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
+        <td><%= product.id %></td>
         <td><%= product.nombre %></td>
         <td><%= product.descripcion %></td>
         <td> <%= image_tag product.image.url(:thumb) %></td>
         <td><%= product.tipo_producto %></td>
         <td><%= product.valor_unitario %></td>
+        <td><%= product.stock %></td>
         <td><%= link_to 'Mostrar', product, class: 'btn btn-default' %></td>
         <td><%= link_to 'Editar', edit_product_path(product), class: 'btn btn-default' %></td>
         <td><%= link_to 'Eliminar', product, class: 'btn btn-default', method: :delete, data: { confirm: 'Esta seguro de eliminar el producto?' } %></td>

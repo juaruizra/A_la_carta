@@ -39,6 +39,10 @@
           <%= f.number_field :valor_unitario %>
         </div>
         <div class="form-group">
+          <%= f.label :stock %><br>
+          <%= f.number_field :stock, placeholder: "Ingrese existencias"%>
+        </div>
+        <div class="form-group">
           <%= f.submit "Guardar", class: 'btn btn-default', data: {confirm: "Desea guardar Producto?"}%>
         </div>
       </div>
