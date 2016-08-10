@@ -12,7 +12,15 @@
     </div>
     <div>
       <%= f.label :date_of_birth, "Date of birth:" %>
-      <%= f.date_select :date_of_birth %>
+      <%= f.date_select :date_of_birth, start_year: 1960, end_year: 2000 %>
+    </div>
+
+    <div>
+      <%= f.label :cargo, "Cargo:" %>
+      <% cargo= {'Administrador'=>'administrador','Vendedor'=>'vendedor','Auxiliar'=>'auxiliar'}%>
+      <% lista= cargo.sort%>
+      <%= f.select :cargo, lista %>
+
     </div>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
