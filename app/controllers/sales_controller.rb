@@ -16,16 +16,19 @@ class SalesController < ApplicationController
   # GET /sales/new
   def new
     @sale = Sale.new
+    @products = Product.all
   end
 
   # GET /sales/1/edit
   def edit
+    @products = Product.all
   end
 
   # POST /sales
   # POST /sales.json
   def create
     @sale = Sale.new(sale_params)
+    @sale.products = params[:products]
 
     respond_to do |format|
       if @sale.save
@@ -70,6 +73,6 @@ class SalesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sale_params
-      params.require(:sale).permit(:user_id, :num_factura, :fecha, :cantidad, :venta_total)
+      params.require(:sale).permit(:user_id, :num_factura, :fecha, :cantidad, :venta_total, :products)
     end
 end

@@ -2,12 +2,14 @@
 
 <h1>Listing Sales</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>User</th>
-      <th>Num factura</th>
+      <th>Id Venta</th>
       <th>Fecha</th>
+      <th>Usuario</th>
+      <th>Numero de Factura</th>
+      <th>Id Producto</th>
       <th>Cantidad</th>
       <th>Venta total</th>
       <th colspan="3"></th>
@@ -17,14 +19,17 @@
   <tbody>
     <% @sales.each do |sale| %>
       <tr>
-        <td><%= sale.user %></td>
+        <td><%= sale.id %></td>
+        <td><%= sale.created_at %></td>
+        <td><%= current_user.name %></td>
         <td><%= sale.num_factura %></td>
-        <td><%= sale.fecha %></td>
+        <td colspan="1"></td>
+        <!-- <td><%= sale.id %></td> debe ir id producto, pendiente de visualizacion -->
         <td><%= sale.cantidad %></td>
         <td><%= sale.venta_total %></td>
-        <td><%= link_to 'Show', sale %></td>
-        <td><%= link_to 'Edit', edit_sale_path(sale) %></td>
-        <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', sale, class: 'btn btn-default'%></td>
+        <td><%= link_to 'Editar', edit_sale_path(sale), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Eliminar', sale, class: 'btn btn-default', method: :delete, data: { confirm: 'Esta seguro de eliminar la venta?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +37,4 @@
 
 <br>
 
-<%= link_to 'New Sale', new_sale_path %>
+<%= link_to 'Nuevo Pedido', new_sale_path, class: 'btn btn-default' %>
