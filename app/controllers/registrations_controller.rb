@@ -8,7 +8,7 @@ class  RegistrationsController < Devise::RegistrationsController
 
   def sign_up(resource_name, resource) #para que no se auto sign_in cuando se sign up
   end
-
+  
   private
     def redirect_unless_admin  #solo si es admin puede dar new
       unless current_user.try(:is_admin?)

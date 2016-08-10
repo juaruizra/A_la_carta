@@ -1,0 +1,31 @@
+<center>
+<h1>Listado de Usuarios</h1>
+</center>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>User Name</th>
+      <th>email</th>
+      <th>cargo</th>
+      <th>Sexo</th>
+      <th>Autorización</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |aux| %>
+      <tr>
+        <td><%= aux.name %></td>
+        <td><%= aux.email %></td>
+        <td> <%= aux.cargo%></td>
+        <td><%= aux.is_female %></td>
+        <td><%= aux.is_admin %></td>
+        <td><%= link_to 'Eliminar', admin_path(aux), data: { confirm: "Are you sure?" }, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to "Add Employee", new_user_registration_path, class: 'btn btn-default' %>

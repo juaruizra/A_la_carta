@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  # get 'admins/index'
+  resources :admins, only: [:index,:destroy]
+
+  match '/all_admins', :to => 'admins#index',   :as => :all_admins,  :via => :get
+  # match '/admin/:id', :to => 'admin#destroy', :as => :destroy_admin, :via => :delete
+
   resources :products
   get 'welcome/index'
 
