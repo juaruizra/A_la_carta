@@ -39,3 +39,12 @@
    bottom: 0;
    text-align: center;
  }
+
+ .backimage2 {
+     background-image: url('Fondorojo.png');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;;
+     background-size: cover;
+     background-color:rgba(10, 10, 12, 0.9);
+ }
