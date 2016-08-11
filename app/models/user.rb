@@ -5,9 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :sales
-
-  # attr_accessible :sale
-
-   validates :name, length: { minimum: 2 }, presence: true, uniqueness: true, format: { with: /\A[a-zA-Z0-9]+\Z/, message: "solo se admiten numeros y letras"  },format: { without: /\s/ , message: "Ingrese UserName sin espacios"  }
+  validates :name, length: { minimum: 2 }, presence: true, uniqueness: true, format: { with: /\A[a-zA-Z0-9]+\Z/, message: "solo se admiten numeros y letras"  },format: { without: /\s/ , message: "Ingrese UserName sin espacios"  }
   #  validates :games_played, numericality: { only_integer: true },, presence: true
 end
