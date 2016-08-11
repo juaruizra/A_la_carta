@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
 
   # attr_accessible :sale
 
-   validates :name, length: { minimum: 2 }, presence: true, uniqueness: true
+   validates :name, length: { minimum: 2 }, presence: true, uniqueness: true, format: { with: /\A[a-zA-Z0-9]+\Z/, message: "solo se admiten numeros y letras"  },format: { without: /\s/ , message: "Ingrese UserName sin espacios"  }
   #  validates :games_played, numericality: { only_integer: true },, presence: true
 end
