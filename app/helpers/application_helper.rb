@@ -9,4 +9,9 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+
+  def price_format(price)
+    number_to_currency(price, unit: '$')
+  end
+
 end
