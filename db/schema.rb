@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160810013445) do
+ActiveRecord::Schema.define(version: 20160813152634) do
 
   create_table "products", force: :cascade do |t|
     t.integer  "sale_id"
@@ -19,16 +19,28 @@ ActiveRecord::Schema.define(version: 20160810013445) do
     t.text     "descripcion"
     t.string   "tipo_producto"
     t.integer  "valor_unitario"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "stock"
+    t.integer  "valor_unitario_centavos", default: 0,     null: false
+    t.string   "valor_unitario_currency", default: "COP", null: false
   end
 
   add_index "products", ["sale_id"], name: "index_products_on_sale_id"
+
+  create_table "sale_products", force: :cascade do |t|
+    t.integer  "sale_id"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "sale_products", ["product_id"], name: "index_sale_products_on_product_id"
+  add_index "sale_products", ["sale_id"], name: "index_sale_products_on_sale_id"
 
   create_table "sales", force: :cascade do |t|
     t.integer  "user_id"
