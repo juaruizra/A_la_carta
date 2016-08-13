@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
-  has_and_belongs_to_many :sales
+  has_many :sale_products
+  has_many :sales, through: :sale_products
 
   validates :nombre, presence: true, uniqueness: true
   validates :descripcion, :tipo_producto, :valor_unitario, :stock, presence: true
