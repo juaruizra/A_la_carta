@@ -1,14 +1,15 @@
 <!--<p id="notice"><%= notice %></p>-->
 
-<h1>Listing Sales</h1>
+<center>
+<h1>Historial de Ventas</h1>
+</center>
 
 <table class="table">
   <thead>
     <tr>
-      <th>Id Venta</th>
+      <th>No. Factura</th>
       <th>Fecha</th>
       <th>Usuario</th>
-      <th>Numero de Factura</th>
       <th>Id Producto</th>
       <th>Cantidad</th>
       <th>Venta total</th>
@@ -22,11 +23,10 @@
         <td><%= sale.id %></td>
         <td><%= sale.created_at %></td>
         <td><%= current_user.name %></td>
-        <td><%= sale.num_factura %></td>
         <td colspan="1"></td>
         <!-- <td><%= sale.id %></td> debe ir id producto, pendiente de visualizacion -->
         <td><%= sale.cantidad %></td>
-        <td><%= sale.venta_total %></td>
+        <td><%= price_format sale.venta_total %></td>
         <td><%= link_to 'Mostrar', sale, class: 'btn btn-default'%></td>
         <td><%= link_to 'Editar', edit_sale_path(sale), class: 'btn btn-default' %></td>
         <td><%= link_to 'Eliminar', sale, class: 'btn btn-default', method: :delete, data: { confirm: 'Esta seguro de eliminar la venta?' } %></td>
@@ -34,7 +34,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Nuevo Pedido', new_sale_path, class: 'btn btn-default' %>
