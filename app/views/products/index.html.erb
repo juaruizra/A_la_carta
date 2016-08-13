@@ -26,7 +26,7 @@
         <td><%= product.descripcion %></td>
         <td> <%= image_tag product.image.url(:thumb) %></td>
         <td><%= product.tipo_producto %></td>
-        <td><%= product.valor_unitario %></td>
+        <td><%= price_format product.valor_unitario %></td>
         <td><%= product.stock %></td>
         <td><%= link_to 'Mostrar', product, class: 'btn btn-default' %></td>
         <td><%= link_to 'Editar', edit_product_path(product), class: 'btn btn-default' %></td>

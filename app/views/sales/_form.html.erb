@@ -42,7 +42,7 @@
                       <td><%= product.nombre%></td>
                       <td> <%= image_tag product.image.url(:thumb) %></td>
                       <td><%= product.descripcion %></td>
-                      <td><%= product.valor_unitario %></td>
+                      <td><%= price_format product.valor_unitario %></td>
                       <td><%= f.number_field :cantidad %></td>
                     </tr>
                   <% end %>
