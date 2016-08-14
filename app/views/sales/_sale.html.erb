@@ -21,9 +21,7 @@
             <th><%=%></th>
             <th>Producto</th>
             <th><%=%></th>
-            <th>Descripcion</th>
-            <th>Valor Unitario</th>
-            <th>Cantidad</th>
+            <th>Total</th>
           </tr>
         </thead>
         <tbody>
@@ -32,9 +30,7 @@
             <td><%= check_box_tag "products[]", product.id%></td>
             <td><%= product.nombre%></td>
             <td> <%= image_tag product.image.url(:thumb) %></td>
-            <td><%= product.descripcion %></td>
-            <td><%= price_format product.valor_unitario %></td>
-            <td><%= f.number_field :cantidad %></td>
+            <td> <%= f.number_field :cantidad%></td>
           </tr>
           <% end %>
         </tbody>
