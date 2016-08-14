@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
           <%= f.label :tipo_producto %><br>
-          <%t_producto = ["Comidas", "Bebidas", "Postres", "Adiciones"]%>
+          <%t_producto = ({'Comidas'=>'comidas','Bebidas'=>'bebidas','Postres'=>'postres', 'Adiciones'=>'adiciones'}).sort%>
           <%= f.select :tipo_producto, t_producto%>
         </div>
         <div class="form-group">
