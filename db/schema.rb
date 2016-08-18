@@ -19,15 +19,13 @@ ActiveRecord::Schema.define(version: 20160813152634) do
     t.text     "descripcion"
     t.string   "tipo_producto"
     t.integer  "valor_unitario"
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "stock"
-    t.integer  "valor_unitario_centavos", default: 0,     null: false
-    t.string   "valor_unitario_currency", default: "COP", null: false
   end
 
   add_index "products", ["sale_id"], name: "index_products_on_sale_id"
