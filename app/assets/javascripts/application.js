@@ -19,7 +19,7 @@
 $(document).ready(function(){
   $('#menu1').click(function(){
     $('#content').fadeOut(1000)
-    $('#content').load('Alacarta.jpg');
+    $('#content').load('');
     $('#content').fadeIn(1000)
   });
   $('#menu2').click(function(){
