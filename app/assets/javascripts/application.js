@@ -15,3 +15,20 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+
+$(document).ready(function(){
+  $('#menu1').click(function(){
+    $('#content').fadeOut(1000)
+    $('#content').load('');
+    $('#content').fadeIn(1000)
+  });
+  $('#menu2').click(function(){
+    $("#content").load('Alacarta.jpg');
+  });
+  $('#menu3').click(function(){
+    $("#content").load('Alacarta.jpg');
+  });
+  $('#menu4').click(function(){
+    $("#content").load('Alacarta.jpg');
+  });
+});
