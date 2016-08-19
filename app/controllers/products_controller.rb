@@ -4,8 +4,11 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
-
+    if params[:product_type]
+      @products = Product.by_product_type(params[:product_type])
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
