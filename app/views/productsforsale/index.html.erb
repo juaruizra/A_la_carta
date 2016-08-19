@@ -1,0 +1,19 @@
+<% @products.each do |product|%>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 top-space">
+    <div class="row">
+      <div class="col-xs">
+        <div class="background-cover relative" style="background-image:url(<%= product.image.url(:sale) %>);top=0">
+          <div class="efect">
+            <div class="row middle-xs">
+              <div class="col-xs white text-center">
+                <h1 style="font-size= 1.2em"><%= product.nombre%></br>
+                <%= price_format(product.valor_unitario)%></h1></br>
+                <p3><%= product.descripcion%></p3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

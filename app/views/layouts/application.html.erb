@@ -10,7 +10,7 @@
   <!-- <link rel="stylesheet" href="flexboxgrid.css"> -->
 </head>
 <body>
-  <%= render "partials/navigation" %>
+  <%= render "partials/navigation" unless @disable_nav %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= yield %>
