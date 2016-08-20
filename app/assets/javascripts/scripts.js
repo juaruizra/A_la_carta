@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+  $('#content').load("http://localhost:3000/productsforsale");
+
   $('#menu1').click(function(){
     // $('#content').fadeOut(1000)
     $('#content').load("http://localhost:3000/productsforsale?product_type=comidas");
